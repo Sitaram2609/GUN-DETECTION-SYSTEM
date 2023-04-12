@@ -36,4 +36,4 @@ Next: Upload on Google Drive *train_model.ipynb*, open it in Google Colab, chang
 
 After completing the training of the model, download the file *best.pt* from the path /content/yolov5/runs/train/exp/weights/best.pt. Close Google Colab. Place your *best.pt* file into your cloning repo local folder. Now your program will recognize your own object.
 ____
-###### Kireev 2022
+
