@@ -11,3 +11,12 @@ Gun detection systems have been installed in various public spaces, such as scho
 While gun detection systems have the potential to improve safety in public spaces, they also raise concerns about privacy and civil liberties. Critics argue that such systems could infringe on individuals' right to privacy and could be used for surveillance purposes. Therefore, it is essential to ensure that these systems are used responsibly and with appropriate safeguards to protect individuals' privacy rights.
 
 In conclusion, gun detection systems offer a promising solution to the growing issue of gun violence in public spaces. However, it is critical to strike a balance between safety and privacy concerns to ensure that these systems are used effectively and responsibly. With continued advancements in technology and increased public awareness, gun detection systems can help create a safer and more secure world for everyone.
+
+sample input:
+![gun1](https://user-images.githubusercontent.com/100852293/231476817-56704d08-bb84-4b22-aca1-e1fa5b9a48fe.jpg)
+
+sample output:
+![gun1_out](https://user-images.githubusercontent.com/100852293/231476980-2afcd044-80e0-4267-97e4-bad2bbc810aa.jpg)
+
+
+
