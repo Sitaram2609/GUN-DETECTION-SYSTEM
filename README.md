@@ -1,26 +1,39 @@
-# GUN-DETECTION-SYSTEM-YOLOV5
-A gun detection system is a technological solution that aims to improve safety and security in public spaces by detecting the presence of firearms in real-time. The system uses advanced sensors, artificial intelligence, and machine learning algorithms to identify the location of guns and alert law enforcement officials immediately.
+# Image&Video Weapon Recognizer by [Yolov5](https://github.com/ultralytics/yolov5)
+First, you can run my example code, and then train your own model and use it in the program.
+## Weapon Recognizer
+###### Program consist of yolov5 model, user interface form on Qt and recognize script.
+To run Recognizer clone repo:
+```
+git clone https://github.com/andrey-kireev-1/Recognizer.git
+```
+Install python requirements:
+```
+pip install -r requirements.txt
+```
+Open and run *app.py*. Here you can select recognition accuracy and files (images: .jpg, .png; videos: .avi, .mp4).
+
+![menu](https://user-images.githubusercontent.com/71035387/171960871-8ab1f746-5bad-4f83-a5f8-058b3002d839.png)
+
+After selecting a file, object recognition will start. 4 categories of weapons can be recognized: pistol, machine gun, knife, hand grenade. For example, the input and output image could be like this:
+
+![example](https://user-images.githubusercontent.com/71035387/171962072-b1fe5c6e-ea10-4582-93f1-7752bc3820c2.png)
+
+And video:
+
+![image](https://user-images.githubusercontent.com/71035387/171964385-877c6aad-d741-44ed-8680-f5f4dc0264f1.png)
 
 
-Gun violence has become a significant concern worldwide, with frequent mass shootings in public spaces like schools, malls, and concerts. In response to this growing issue, technology companies have developed gun detection systems to improve safety and security in public places.
+Download different photos and videos with weapons and try to recognize them. Enjoy :)
 
-A gun detection system uses advanced sensors, artificial intelligence, and machine learning algorithms to detect the presence of guns in a public space. The system can identify the gun's location and alert law enforcement officials immediately, allowing for a faster response time and potentially preventing a tragic incident from occurring.
+## How to create your own model to recognize:
+Collect a set of images with your object. Label your images (for example, with: [Make Sense](https://www.makesense.ai/)). 
 
-Gun detection systems have been installed in various public spaces, such as schools, universities, airports, and shopping malls. They are also being tested in smart cities, where they can be integrated with other smart technologies to create a more connected and secure environment.
+Divide the collected and labeled set of images into 3 folders: **train, valid, test**. *(Further, I recommend using Google Colab, but you can also work locally.)* Create a folder in Google Drive, put the folders train, valid, test and dataset.yaml file there (replace the folder paths according to your Google Drive). 
 
-While gun detection systems have the potential to improve safety in public spaces, they also raise concerns about privacy and civil liberties. Critics argue that such systems could infringe on individuals' right to privacy and could be used for surveillance purposes. Therefore, it is essential to ensure that these systems are used responsibly and with appropriate safeguards to protect individuals' privacy rights.
+Next: Upload on Google Drive *train_model.ipynb*, open it in Google Colab, change folders paths and run this file. The model will start training.
 
-In conclusion, gun detection systems offer a promising solution to the growing issue of gun violence in public spaces. However, it is critical to strike a balance between safety and privacy concerns to ensure that these systems are used effectively and responsibly. With continued advancements in technology and increased public awareness, gun detection systems can help create a safer and more secure world for everyone.
+![train](https://user-images.githubusercontent.com/71035387/171963769-e03ccc93-4fa3-49de-812b-405e5ced0f25.png)
 
-sample input:
-
-
-![gun1](https://user-images.githubusercontent.com/100852293/231476817-56704d08-bb84-4b22-aca1-e1fa5b9a48fe.jpg)
-
-sample output:
-
-
-![gun1_out](https://user-images.githubusercontent.com/100852293/231476980-2afcd044-80e0-4267-97e4-bad2bbc810aa.jpg)
-
-
-
+After completing the training of the model, download the file *best.pt* from the path /content/yolov5/runs/train/exp/weights/best.pt. Close Google Colab. Place your *best.pt* file into your cloning repo local folder. Now your program will recognize your own object.
+____
+###### Kireev 2022

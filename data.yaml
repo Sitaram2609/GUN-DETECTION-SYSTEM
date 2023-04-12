@@ -1,0 +1,5 @@
+train: /content/drive/MyDrive/train_data/images/train
+val: /content/drive/MyDrive/train_data/images/val
+
+nc: 1
+names: ['Guns']
